@@ -1,4 +1,11 @@
-<p>
-  <div>{{profile.name}}</div>
-  <input [(ngModel)] = "profile.name" placeholder="Name"/>
-</p>
+<ul class="profiles">
+  <li 
+    *ngFor="let profile of profiles" 
+    (click)="onSelect(profile)"
+    [class.selected]="profile === selectedProfile">
+    <span class="badge">{{profile.id}}</span> {{profile.name}}
+  </li>
+</ul>
+<app-profile-details [profile]="selectedProfile"></app-profile-details>
+
+
