@@ -8,19 +8,22 @@ import { ProfilesComponent } from './profiles/profiles.component';
 import { SiteMenuComponent } from './site-menu/site-menu.component';
 import { ProfileDetailsComponent } from './profile-details/profile-details.component';
 import { ProfileService } from '../app/profile.service';
+import { MessageComponent } from './message/message.component';
+import { MessageService } from './message.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfilesComponent,
     SiteMenuComponent,
-    ProfileDetailsComponent
+    ProfileDetailsComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [ ProfileService ],
+  providers: [ ProfileService, MessageService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
