@@ -10,6 +10,8 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
 import { ProfileService } from '../app/profile.service';
 import { MessageComponent } from './message/message.component';
 import { MessageService } from './message.service';
+import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { MessageService } from './message.service';
     ProfilesComponent,
     SiteMenuComponent,
     ProfileDetailsComponent,
-    MessageComponent
+    MessageComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [ ProfileService, MessageService ],
   bootstrap: [AppComponent]

@@ -12,9 +12,9 @@ import { MessageService } from '../message.service';
 export class ProfilesComponent implements OnInit {
   
   profiles: Profile[];
-  selectedProfile: Profile;
+  // selectedProfile: Profile;
 
-  constructor(private profileService: ProfileService, private messageService: MessageService) {}
+  constructor(private profileService: ProfileService /*, private messageService: MessageService */) {}
 
   getProfiles(): void{
     this.profileService.getProfiles().subscribe(profiles => this.profiles = profiles);
@@ -25,8 +25,8 @@ export class ProfilesComponent implements OnInit {
     console.log('after init');
   }
 
-  onSelect(profile: Profile): void {
-    this.messageService.add("Editing profile with id - " + profile.id);
-    this.selectedProfile = profile;
-  }
+  // onSelect(profile: Profile): void {
+  //   this.messageService.add("Editing profile with id - " + profile.id);
+  //   this.selectedProfile = profile;
+  // }
 }

@@ -3,7 +3,12 @@
   <p>The AppComponent works like layout</p>
   <h1>{{ title }}</h1>
   <p>ProfilesComponent declared here</p>
-  <app-profiles></app-profiles>
+  <!-- <app-profiles></app-profiles> -->
+  <nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/profiles">Profiles</a>
+  </nav>
+  <router-outlet></router-outlet>
   <app-site-menu></app-site-menu>
   <app-message></app-message>
 </div>

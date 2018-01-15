@@ -15,4 +15,10 @@ export class ProfileService {
     console.log(this.messageService.messages);
     return of(PROFILES);
   }
+
+  getProfile(id: number): Observable<Profile> {
+    this.messageService.add('ProfileService: Fetching profile with id - ' + id);
+    return of(PROFILES.find(item => item.id === id));
+  }
+
 }

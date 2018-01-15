@@ -1,11 +1,12 @@
 <ul class="profiles">
   <li 
-    *ngFor="let profile of profiles" 
-    (click)="onSelect(profile)"
+    *ngFor="let profile of profiles"
     [class.selected]="profile === selectedProfile">
-    <span class="badge">{{profile.id}}</span> {{profile.name}}
+    <a routerLink="/profile/{{profile.id}}">
+      <span class="badge">{{profile.id}}</span> {{profile.name}}
+    </a>
   </li>
 </ul>
-<app-profile-details [profile]="selectedProfile"></app-profile-details>
+<!-- <app-profile-details [profile]="selectedProfile"></app-profile-details> -->
 
 

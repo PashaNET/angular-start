@@ -1,9 +1,11 @@
 <div *ngIf="profile">
-    <h2>{{ profile.name | uppercase }} Details</h2>
-    <div><span>id: </span>{{profile.id}}</div>
-    <div>
-      <label>name:
-        <input [(ngModel)]="profile.name" placeholder="name">
-      </label>
-    </div>
+  <button (click)="goBack()">go back</button>
+  <h2>{{ profile.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{profile.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="profile.name" placeholder="name">
+    </label>
   </div>
+</div>
+
