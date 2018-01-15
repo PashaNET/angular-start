@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PROFILES } from '../../test-profiles';
+// import { PROFILES } from '../../test-profiles';
+import { ProfileService } from '../profile.service';
 import { Profile } from './profile';
 
 @Component({
@@ -9,14 +10,19 @@ import { Profile } from './profile';
 })
 export class ProfilesComponent implements OnInit {
   
-  profiles = PROFILES;
+  profiles: Profile[];
   selectedProfile: Profile;
 
-  constructor() { 
+  constructor(private profileService: ProfileService) { 
     console.log('constructor invoked');
   }
 
+  getProfiles(): void{
+    this.profileService.getProfiles().subscribe(profiles => this.profiles = profiles);
+  }
+
   ngOnInit() {
+    this.getProfiles();
     console.log('after init');
   }
 

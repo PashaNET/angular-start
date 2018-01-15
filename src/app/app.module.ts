@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ProfilesComponent } from './profiles/profiles.component';
 import { SiteMenuComponent } from './site-menu/site-menu.component';
 import { ProfileDetailsComponent } from './profile-details/profile-details.component';
-
+import { ProfileService } from '../app/profile.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ ProfileService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
