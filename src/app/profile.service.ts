@@ -12,7 +12,6 @@ export class ProfileService {
 
   getProfiles(): Observable<Profile[]>{
     this.messageService.add('ProfileService: Fetching profiles');
-    console.log(this.messageService.messages);
     return of(PROFILES);
   }
 
